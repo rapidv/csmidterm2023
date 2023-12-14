@@ -199,8 +199,9 @@ public class StockBot {
         displayStats("Starting", "BEFORE BOT"); // show the stats before they started the bot automaton
         displayStats("Current", "AFTER BOT"); // show the stats after the bot automation
 
+        System.out.println(moneyAvailable-investedMoney);
         float Profit = moneyAvailable - investedMoney; // get the profit
-        String formattedProfit = formatString(Profit); 
+        String formattedProfit = formatString(Math.abs(Profit)); 
 
         if (Profit >= 0) {
             System.out.printf("You have made %s in profit!", formattedProfit);
